@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "rl"
+version = "0.1.0"
+description = ""
+authors = ["KShivendu <kshivendu1@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+swig = "^4.3.0"
+box2d = "^2.3.10"
+gymnasium = {extras = ["mujoco", "box2d", "others"], version = "^1.0.0"}
+pgx = "^2.5.0"
+rlcard = "^1.2.0"
+torch = "^2.6.0"
+matplotlib = "^3.10.0"
+graphviz = "^0.20.3"
+networkx = "^3.4.2"
+pandas = "^2.2.3"
+tensorboard = "^2.19.0"
+stable-baselines3 = {extras = ["extra"], version = "^2.5.0"}
+opencv-python = "^4.11.0.86"
+rl-zoo3 = "^2.5.0"
+sb3-contrib = {git = "https://github.com/Soham4001A/stable-baselines3-contrib.git", rev = "master"}
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
