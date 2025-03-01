@@ -18,9 +18,8 @@ else:
     print("Model doesn't exist")
     model = MODEL_TYPE("MlpPolicy", env, verbose=1, tensorboard_log=LOG_DIR)
 
-
 model.learn(total_timesteps=50_000, reset_num_timesteps=False, tb_log_name=MODEL_NAME)
-model.save(MODEL_NAME)
+model.save(f"models/{MODEL_NAME}")
 
 vec_env = model.get_env()
 obs = vec_env.reset()
@@ -29,3 +28,4 @@ for i in range(1000):
     obs, reward, done, info = vec_env.step(action)
     vec_env.render("human")
     sleep(0.01)
+
